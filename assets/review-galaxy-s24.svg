@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b7fb8"/><stop offset=".52" stop-color="#3657d9"/><stop offset="1" stop-color="#8b4dcc"/></linearGradient></defs>
+<rect width="1200" height="700" fill="#071329"/><circle cx="820" cy="270" r="330" fill="url(#g)" opacity=".28"/>
+<rect x="720" y="72" width="300" height="555" rx="58" fill="#0a1427" stroke="#6abde8" stroke-width="8"/>
+<rect x="748" y="112" width="244" height="430" rx="39" fill="url(#g)" opacity=".58"/>
+<circle cx="790" cy="155" r="26" fill="#071329"/><circle cx="860" cy="155" r="26" fill="#071329"/>
+<text x="95" y="190" fill="#8de8ff" font-family="Arial" font-size="28" font-weight="700">Samsung Review</text>
+<text x="95" y="270" fill="white" font-family="Arial" font-size="55" font-weight="800">Galaxy S24</text>
+<text x="95" y="325" fill="#b8c8dc" font-family="Arial" font-size="24">ARTIPHONERA Phone Review</text>
+</svg>

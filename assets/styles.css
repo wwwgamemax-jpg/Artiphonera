@@ -605,3 +605,29 @@ html[dir="rtl"] .theme-popover{right:auto;left:0}
   }
   body.v9 .lang-select{width:78px!important;max-width:78px!important}
 }
+
+/* ARTIPHONERA V10 REVIEWS + ACCOUNT UI */
+.account-button{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;border:1px solid var(--theme-border);background:var(--theme-panel);font-size:19px;flex:0 0 auto}
+.review-page{padding-top:55px;padding-bottom:75px}
+.review-shell{border:1px solid var(--theme-border);border-radius:28px;overflow:hidden;background:var(--theme-panel)}
+.review-cover{width:100%;height:440px;object-fit:cover;background:var(--theme-panel2)}
+.review-content{padding:34px;max-width:950px;margin:auto}
+.review-content h1{font-size:clamp(40px,6vw,68px);line-height:1.02;margin:16px 0}
+.review-lead{font-size:19px;color:var(--theme-muted)}
+.review-score-row{display:grid;grid-template-columns:130px 1fr;gap:22px;align-items:center;margin:30px 0;padding:22px;border:1px solid var(--theme-border);border-radius:20px;background:var(--theme-panel2)}
+.review-score strong{font-size:46px}.review-score span{color:var(--theme-muted)}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}
+.pros-cons>div,.review-verdict{padding:22px;border:1px solid var(--theme-border);border-radius:19px;background:var(--theme-panel2)}
+.review-content p,.review-content li{color:var(--theme-muted);line-height:1.75}
+.auth-page{min-height:calc(100vh - 90px);display:grid;place-items:center;padding:45px 18px}
+.auth-card{width:min(100%,480px);border:1px solid var(--theme-border);background:var(--theme-panel);border-radius:28px;padding:34px;box-shadow:0 30px 80px rgba(0,0,0,.28)}
+.auth-card>img{width:230px;max-width:75%;display:block;margin:0 auto 20px}
+.auth-card h1{text-align:center;font-size:38px;margin:10px 0}.auth-card>p{text-align:center;color:var(--theme-muted)}
+.auth-form{display:grid;gap:16px;margin-top:26px}.auth-form label{display:grid;gap:8px;font-weight:800}
+.auth-form input{width:100%;box-sizing:border-box;padding:14px 15px;border-radius:13px;border:1px solid var(--theme-border);background:var(--theme-panel2);color:var(--theme-text);font:inherit}
+.auth-small-link{text-align:right;color:var(--theme-accent)}.auth-alt a{color:var(--theme-accent)}.auth-note{font-size:12px!important;margin-top:22px}
+.v10-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.v10-review-card{border:1px solid var(--theme-border);border-radius:20px;overflow:hidden;background:var(--theme-panel);color:var(--theme-text)}
+.v10-review-card img{width:100%;height:210px;object-fit:cover}.v10-review-card div{padding:18px}.v10-review-card h3{margin:6px 0}.v10-review-card p{color:var(--theme-muted)}
+@media(max-width:900px){.v10-review-grid{grid-template-columns:repeat(2,1fr)}.review-cover{height:330px}}
+@media(max-width:650px){.v10-review-grid,.pros-cons{grid-template-columns:1fr}.review-cover{height:230px}.review-content{padding:22px}.review-score-row{grid-template-columns:1fr}.account-button{width:42px;height:42px}}

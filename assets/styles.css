@@ -257,3 +257,147 @@ html[dir="rtl"] .nav,html[dir="rtl"] .cta-row{direction:rtl}
  .v7-grid4,.v7-articles,.v7-brandstrip{grid-template-columns:1fr}
  .v7-section-head,.v7-newsletter{align-items:flex-start;flex-direction:column}
 }
+
+
+/* ==================================================
+   ARTIPHONERA V8 — DISTINCT REDESIGN
+   Keeps V7 language pages but radically changes UI.
+   ================================================== */
+body.v8{
+  background:#050914!important;
+  color:#f7f9fc;
+}
+.v8 .site-header{
+  position:sticky;top:0;z-index:50;
+  background:#050914!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+  box-shadow:0 12px 40px rgba(0,0,0,.22);
+}
+.v8 .nav{height:96px!important;gap:22px}
+.v8 .brand{display:flex;align-items:center;min-width:310px}
+.v8 .brand img{
+  width:390px!important;
+  max-width:390px!important;
+  max-height:82px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+.v8 .nav-links{gap:28px}
+.v8 .nav-links a{font-weight:700;color:#dce6f3}
+.v8 .lang-select{min-width:150px;background:#0c1730}
+.v8 .search-btn{background:#101c34;border:1px solid rgba(255,255,255,.1)}
+
+.v8-hero{
+  min-height:650px;
+  display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 80% 30%,rgba(0,194,255,.26),transparent 23%),
+    radial-gradient(circle at 90% 60%,rgba(129,77,255,.22),transparent 26%),
+    linear-gradient(125deg,#041124 0%,#07172f 52%,#0a102b 100%);
+  position:relative;overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.v8-hero:after{
+  content:"";position:absolute;right:-110px;bottom:-170px;width:650px;height:650px;
+  border-radius:50%;border:1px solid rgba(104,187,255,.12);
+  box-shadow:0 0 0 85px rgba(90,123,255,.035),0 0 0 170px rgba(147,72,255,.025);
+}
+.v8-hero-grid{
+  display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center;
+  position:relative;z-index:2;
+}
+.v8-eyebrow{
+  display:inline-flex;padding:9px 15px;border-radius:999px;
+  background:linear-gradient(90deg,rgba(0,209,255,.12),rgba(138,76,255,.14));
+  border:1px solid rgba(76,215,255,.28);color:#93edff;font-weight:900;
+  letter-spacing:.08em;text-transform:uppercase;font-size:12px;
+}
+.v8-title{font-size:clamp(58px,7.5vw,104px);line-height:.95;letter-spacing:-.055em;margin:18px 0 24px}
+.v8-title span{display:block;background:linear-gradient(90deg,#14d7ef,#4478ff 48%,#a465ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.v8-lead{font-size:19px;color:#afbdd0;max-width:650px;line-height:1.75}
+.v8-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.v8-btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:14px;font-weight:900}
+.v8-btn.primary{background:linear-gradient(90deg,#2987ff,#8c5bff);color:white;box-shadow:0 14px 38px rgba(62,119,255,.25)}
+.v8-btn.secondary{border:1px solid #2b3c5f;background:#081126;color:white}
+.v8-stats{display:flex;gap:28px;margin-top:32px;flex-wrap:wrap}
+.v8-stat{display:flex;gap:10px;align-items:center;color:#c3cede}
+.v8-stat b{display:block;color:white;font-size:18px}.v8-stat small{display:block;color:#8190a6}
+
+.v8-phone-art{position:relative;min-height:540px;display:grid;place-items:center}
+.v8-phone-glow{position:absolute;width:470px;height:470px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(34,211,238,.3),rgba(92,80,255,.18) 45%,transparent 68%)}
+.v8-phone{
+  width:300px;height:545px;border-radius:58px;padding:13px;position:relative;z-index:2;
+  background:linear-gradient(150deg,#0c1528,#263557 55%,#080c15);
+  border:2px solid #6076a0;box-shadow:0 55px 110px rgba(0,0,0,.58);
+  transform:rotate(5deg);
+}
+.v8-phone-screen{height:100%;border-radius:46px;background:linear-gradient(160deg,#071122,#0a2850 48%,#281553);overflow:hidden;position:relative}
+.v8-phone-screen:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,rgba(27,214,255,.35),transparent 25%),radial-gradient(circle at 45% 75%,rgba(152,89,255,.35),transparent 34%)}
+.v8-notch{width:105px;height:27px;background:#02050c;border-radius:99px;margin:12px auto;position:relative;z-index:2}
+.v8-phone-copy{position:absolute;z-index:2;left:24px;right:24px;bottom:44px}
+.v8-phone-copy strong{font-size:31px;line-height:1.12;display:block}
+.v8-phone-copy p{color:#c6d1df;font-size:14px}
+.v8-mini-search{margin-top:18px;border:1px solid rgba(255,255,255,.17);border-radius:13px;padding:11px 13px;color:#9db0c9;background:rgba(4,10,22,.42)}
+
+.v8-light-section{background:#f5f7fb;color:#101828;padding:58px 0}
+.v8-dark-section{background:#050914;padding:72px 0}
+.v8-section-title{font-size:36px;letter-spacing:-.025em;margin:0}
+.v8-section-sub{color:#667085;margin-top:8px}
+.v8-dark-section .v8-section-sub{color:#8fa0b8}
+.v8-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.v8-action-card{
+  border-radius:22px;padding:24px;background:#0c1629;color:white;border:1px solid #1d2d4a;
+  min-height:195px;box-shadow:0 14px 38px rgba(11,23,46,.08)
+}
+.v8-action-card .ico{font-size:31px}.v8-action-card h3{font-size:20px;margin:14px 0 8px}.v8-action-card p{color:#a9b6c9;font-size:14px}
+
+.v8-slider-wrap{position:relative;margin-top:28px;overflow:hidden}
+.v8-slider-track{display:flex;gap:18px;transition:transform .6s ease}
+.v8-slide{min-width:calc(25% - 14px);background:white;border-radius:18px;overflow:hidden;border:1px solid #dfe6ef;box-shadow:0 10px 26px rgba(16,24,40,.07)}
+.v8-slide img{width:100%;height:190px;object-fit:cover;background:#0b1326}
+.v8-slide-body{padding:18px}.v8-slide-body .tag{font-size:11px;font-weight:900;color:#2a67ef;text-transform:uppercase}.v8-slide-body h3{font-size:18px;line-height:1.35;margin:7px 0 10px}.v8-slide-body p{color:#667085;font-size:13px}
+.v8-slider-dots{display:flex;justify-content:center;gap:7px;margin-top:16px}
+.v8-slider-dot{width:8px;height:8px;border-radius:50%;border:0;background:#c7d0dc}
+.v8-slider-dot.active{background:#3979ff}
+
+.v8-problems-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.v8-problem{display:flex;align-items:center;gap:13px;padding:16px 18px;border:1px solid #dfe5ee;border-radius:15px;background:white;color:#172033;font-weight:700}
+.v8-problem .dot{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#edf4ff}
+
+.v8-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.v8-tool{background:#0c1629;border:1px solid #1e2e4b;border-radius:20px;padding:24px}
+.v8-tool h3{margin:0 0 7px}.v8-tool p{color:#93a2b8}
+
+.v8-brands{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:24px}
+.v8-brand{
+  display:flex;align-items:center;justify-content:center;min-height:88px;border-radius:16px;
+  border:1px solid #dfe5ee;background:white;color:#1b2437;font-weight:900;
+  transition:.18s transform,.18s box-shadow;
+}
+.v8-brand:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(16,24,40,.09)}
+.v8-brand span{font-size:18px}
+
+.v8-footer{background:#f5f7fb!important;color:#101828!important;border-top:1px solid #e4e9f0;padding-top:40px}
+.v8-footer a{color:#344054!important}.v8-footer p{color:#667085!important}
+.v8-footer img{width:320px!important;max-height:72px!important}
+
+@media(max-width:1000px){
+ .v8 .brand{min-width:230px}.v8 .brand img{width:285px!important}
+ .v8-hero-grid{grid-template-columns:1fr;gap:22px}.v8-phone-art{min-height:450px}
+ .v8-actions{grid-template-columns:repeat(2,1fr)}
+ .v8-slide{min-width:calc(50% - 9px)}
+ .v8-brands{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:650px){
+ .v8 .nav{height:auto!important;min-height:86px;padding:12px 0;display:grid;grid-template-columns:1fr auto auto;gap:10px}
+ .v8 .brand{min-width:0}.v8 .brand img{width:220px!important;max-width:220px!important}
+ .v8 .nav-links{display:none}
+ .v8 .lang-select{min-width:130px}
+ .v8-hero{min-height:auto;padding:54px 0}
+ .v8-title{font-size:52px}
+ .v8-phone-art{min-height:390px}.v8-phone{width:220px;height:400px}
+ .v8-actions{grid-template-columns:1fr}
+ .v8-slide{min-width:100%}
+ .v8-problems-grid,.v8-tools{grid-template-columns:1fr}
+ .v8-brands{grid-template-columns:repeat(2,1fr)}
+}

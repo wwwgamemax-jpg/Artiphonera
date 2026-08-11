@@ -43,3 +43,21 @@ function num(id){return parseFloat(document.getElementById(id)?.value||0)}
 window.calcBattery=function(){const mah=num('mah'),draw=num('draw'),eff=num('eff')||85,out=$('#batteryResult');if(!out)return;if(mah<=0||draw<=0){out.textContent='Enter valid values.';return;}out.innerHTML=`Estimated runtime: <strong>${((mah*(eff/100))/draw).toFixed(1)} hours</strong>.`};
 window.calcCharge=function(){const mah=num('cmah'),watts=num('watts'),eff=num('ceff')||80,out=$('#chargeResult');if(!out)return;if(mah<=0||watts<=0){out.textContent='Enter valid values.';return;}const wh=mah*3.85/1000;out.innerHTML=`Idealized charging estimate: <strong>${(wh/(watts*(eff/100))).toFixed(2)} hours</strong>.`};
 window.calcStorage=function(){const photos=num('photos')*4/1024,video=num('video')*.18,apps=num('apps')*.25,games=num('games')*3,downloads=num('downloads'),system=24,total=photos+video+apps+games+downloads+system;let rec='128GB';if(total>100)rec='256GB';if(total>210)rec='512GB or more';const out=$('#storageResult');if(out)out.innerHTML=`Estimated usage: <strong>${total.toFixed(1)}GB</strong>. Suggested capacity: <strong>${rec}</strong>.`};
+
+
+(function(){
+  const themes=['ocean','violet','teal','midnight','rose'];
+  const saved=localStorage.getItem('artiphonera-theme');
+  const theme=themes.includes(saved)?saved:'ocean';
+  document.body.dataset.theme=theme;
+  document.querySelectorAll('.theme-dot').forEach(btn=>{
+    btn.classList.toggle('active',btn.dataset.theme===theme);
+    btn.addEventListener('click',()=>{
+      const t=btn.dataset.theme;
+      if(!themes.includes(t))return;
+      document.body.dataset.theme=t;
+      localStorage.setItem('artiphonera-theme',t);
+      document.querySelectorAll('.theme-dot').forEach(x=>x.classList.toggle('active',x.dataset.theme===t));
+    });
+  });
+})();

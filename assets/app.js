@@ -127,15 +127,27 @@ showArticleSlide(0); startArticleSlider();
   });
 }
 
-// ARTIPHONERA v5: seven active languages only
-const langPicker = document.querySelector('#language-select');
-if(langPicker){
-  langPicker.addEventListener('change',()=>{
-    const code = langPicker.value;
-    const path = location.pathname;
-    const currentLang = (path.match(/^\/(ar|es|fr|de|pt|it)\//)||[])[1];
+//)||[])[1];
     let base = currentLang ? '../' : '';
     const routes = {en:'index.html',ar:'ar/index.html',es:'es/index.html',fr:'fr/index.html',de:'de/index.html',pt:'pt/index.html',it:'it/index.html'};
     location.href = base + routes[code];
   });
 }
+
+// ARTIPHONERA v5.1: robust language switching from any page
+(function(){
+  const picker = document.querySelector('#language-select');
+  if(!picker) return;
+
+  const active = ['en','ar','es','fr','de','pt','it'];
+  const path = window.location.pathname;
+  const current = (path.match(/^\/(ar|es|fr|de|pt|it)(?:\/|$)/) || [])[1] || 'en';
+
+  if(active.includes(current)) picker.value = current;
+
+  picker.addEventListener('change', function(){
+    const code = picker.value;
+    const target = code === 'en' ? '/index.html' : '/' + code + '/index.html';
+    window.location.assign(target);
+  });
+})();

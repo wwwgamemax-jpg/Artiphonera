@@ -97,3 +97,23 @@ if(apLang){
     }
   });
 }
+
+// ARTIPHONERA v3 article carousel
+const articleTrack = $('#article-track');
+const articleSlides = $$('.article-slide');
+const articleDots = $$('.article-dot');
+let articleIndex = 0, articleTimer;
+
+function showArticleSlide(i){
+  if(!articleTrack || !articleSlides.length) return;
+  articleIndex = (i + articleSlides.length) % articleSlides.length;
+  articleTrack.style.transform = `translateX(-${articleIndex * 100}%)`;
+  articleDots.forEach((d,n)=>d.classList.toggle('active', n===articleIndex));
+}
+function startArticleSlider(){
+  if(articleSlides.length < 2) return;
+  clearInterval(articleTimer);
+  articleTimer = setInterval(()=>showArticleSlide(articleIndex+1), 5200);
+}
+articleDots.forEach((d,i)=>d.addEventListener('click',()=>{showArticleSlide(i);startArticleSlider();}));
+showArticleSlide(0); startArticleSlider();

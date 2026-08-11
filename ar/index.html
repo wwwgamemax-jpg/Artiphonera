@@ -2,7 +2,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ARTIPHONERA — نشرحه ببساطة.</title>
 <meta name="description" content="حل مشاكل الهاتف الشائعة، وافهم جهازك، وقارن الخيارات واتخذ قرارات تقنية أفضل.">
-<link rel="icon" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/styles.css"></head>
+<link rel="icon" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/styles.css"><script id="artiphonera-theme-boot">(function(){try{var t=localStorage.getItem('artiphonera-theme')||'ocean';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','ocean')}})();</script></head>
 <body class="v9" data-theme="ocean">
 <header class="site-header"><div class="wrap nav">
 <a class="brand" href="../index.html"><img src="../assets/logo.svg" alt="ARTIPHONERA"></a>
@@ -11,12 +11,15 @@
 <a href="../about.html">من نحن</a><a href="../contact.html">اتصل بنا</a>
 </nav>
 <select id="language-select" class="lang-select"><option value="en">English</option><option value="ar" selected>العربية</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="pt">Português</option><option value="it">Italiano</option></select>
-<button class="search-btn">بحث</button><button class="menu-btn">☰</button><div class="theme-switcher"><span class="theme-switcher-label">Theme</span>
-<button class="theme-dot" data-theme="ocean" aria-label="Ocean theme"></button>
-<button class="theme-dot" data-theme="violet" aria-label="Violet theme"></button>
-<button class="theme-dot" data-theme="teal" aria-label="Teal theme"></button>
-<button class="theme-dot" data-theme="midnight" aria-label="Midnight theme"></button>
-<button class="theme-dot" data-theme="rose" aria-label="Rose theme"></button></div>
+<button class="search-btn">بحث</button><button class="menu-btn">☰</button><div class="theme-menu">
+<button class="theme-toggle" type="button" aria-label="Choose page color" aria-expanded="false">🎨</button>
+<div class="theme-popover" hidden>
+<button class="theme-choice" data-theme="ocean"><span class="theme-swatch ocean"></span><span>Ocean</span></button>
+<button class="theme-choice" data-theme="violet"><span class="theme-swatch violet"></span><span>Violet</span></button>
+<button class="theme-choice" data-theme="teal"><span class="theme-swatch teal"></span><span>Teal</span></button>
+<button class="theme-choice" data-theme="midnight"><span class="theme-swatch midnight"></span><span>Midnight</span></button>
+<button class="theme-choice" data-theme="rose"><span class="theme-swatch rose"></span><span>Rose</span></button>
+</div></div>
 </div></header>
 
 <main>

@@ -502,3 +502,106 @@ body[data-theme="rose"]{--theme-bg:#24101b;--theme-panel:#351626;--theme-panel2:
 @media(max-width:650px){
   .theme-switcher{grid-column:1/-1;justify-self:start}
 }
+
+/* ARTIPHONERA V9.1 HEADER + GLOBAL THEME FIX */
+html[data-theme="ocean"], body[data-theme="ocean"]{--theme-bg:#061126;--theme-panel:#0d1b34;--theme-panel2:#122443;--theme-accent:#20b9f0;--theme-accent2:#765cff;--theme-muted:#a9b9cf;--theme-border:#203757}
+html[data-theme="violet"], body[data-theme="violet"]{--theme-bg:#120b25;--theme-panel:#1b1237;--theme-panel2:#241747;--theme-accent:#8b67ff;--theme-accent2:#d252ff;--theme-muted:#c0b1d3;--theme-border:#3a2860}
+html[data-theme="teal"], body[data-theme="teal"]{--theme-bg:#06201f;--theme-panel:#0b302d;--theme-panel2:#10403b;--theme-accent:#2ed8c2;--theme-accent2:#5d96ff;--theme-muted:#a7c8c4;--theme-border:#1d4f49}
+html[data-theme="midnight"], body[data-theme="midnight"]{--theme-bg:#0b1020;--theme-panel:#131b31;--theme-panel2:#1a2642;--theme-accent:#6d8fff;--theme-accent2:#53c7ff;--theme-muted:#aab5c8;--theme-border:#2b3957}
+html[data-theme="rose"], body[data-theme="rose"]{--theme-bg:#24101b;--theme-panel:#351626;--theme-panel2:#4a1c31;--theme-accent:#ef6b9f;--theme-accent2:#9b69ff;--theme-muted:#d1afbf;--theme-border:#673249}
+
+html{background:var(--theme-bg,#061126)}
+body.v9{background:var(--theme-bg)!important}
+
+body.v9 .site-header{
+  background:var(--theme-bg)!important;
+  position:relative;
+  z-index:100;
+}
+body.v9 .site-header .nav{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+body.v9 .site-header .brand{
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+}
+body.v9 .site-header .brand img{
+  width:190px!important;
+  max-width:none!important;
+  height:auto!important;
+  display:block;
+}
+body.v9 .site-header .nav-links{flex:1}
+body.v9 .lang-select{min-width:150px}
+
+.theme-menu{position:relative;flex:0 0 auto}
+.theme-toggle{
+  width:46px;height:46px;border-radius:14px;border:1px solid var(--theme-border);
+  background:var(--theme-panel);color:var(--theme-text);font-size:21px;cursor:pointer;
+  display:grid;place-items:center;
+}
+.theme-popover{
+  position:absolute;top:54px;right:0;z-index:999;
+  width:180px;padding:8px;border:1px solid var(--theme-border);
+  border-radius:16px;background:var(--theme-panel);
+  box-shadow:0 18px 50px rgba(0,0,0,.35)
+}
+html[dir="rtl"] .theme-popover{right:auto;left:0}
+.theme-choice{
+  width:100%;display:flex;align-items:center;gap:10px;
+  border:0;background:transparent;color:var(--theme-text);
+  padding:10px;border-radius:11px;text-align:left;cursor:pointer;font-weight:700
+}
+.theme-choice:hover,.theme-choice.active{background:var(--theme-panel2)}
+.theme-swatch{width:20px;height:20px;border-radius:50%;display:block;border:2px solid rgba(255,255,255,.35)}
+.theme-swatch.ocean{background:linear-gradient(135deg,#159fe8,#735cff)}
+.theme-swatch.violet{background:linear-gradient(135deg,#6750ff,#d052ff)}
+.theme-swatch.teal{background:linear-gradient(135deg,#00a8a8,#41d6b6)}
+.theme-swatch.midnight{background:linear-gradient(135deg,#27334f,#5874ad)}
+.theme-swatch.rose{background:linear-gradient(135deg,#e14f85,#8849ff)}
+
+@media(max-width:900px){
+  body.v9 .site-header .nav{
+    min-height:74px;
+    padding-top:10px;padding-bottom:10px;
+    gap:10px;
+    flex-wrap:nowrap;
+  }
+  body.v9 .site-header .brand{margin-right:auto}
+  html[dir="rtl"] body.v9 .site-header .brand{margin-right:0;margin-left:auto}
+  body.v9 .site-header .brand img{
+    width:150px!important;
+    min-width:150px!important;
+  }
+  body.v9 .site-header .nav-links{display:none}
+  body.v9 .search-btn{display:none}
+  body.v9 .lang-select{
+    min-width:0!important;
+    width:112px!important;
+    max-width:112px!important;
+    height:46px;
+  }
+  body.v9 .menu-btn{width:46px;height:46px;flex:0 0 46px}
+  .theme-toggle{width:46px;height:46px}
+}
+@media(max-width:480px){
+  body.v9 .site-header .nav{gap:7px;padding-left:10px;padding-right:10px}
+  body.v9 .site-header .brand img{
+    width:125px!important;
+    min-width:125px!important;
+  }
+  body.v9 .lang-select{width:88px!important;max-width:88px!important;font-size:13px}
+  body.v9 .menu-btn,.theme-toggle{width:42px;height:42px;flex-basis:42px}
+  .theme-popover{top:49px;width:165px}
+}
+@media(max-width:380px){
+  body.v9 .site-header .brand img{
+    width:108px!important;
+    min-width:108px!important;
+  }
+  body.v9 .lang-select{width:78px!important;max-width:78px!important}
+}

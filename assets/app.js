@@ -45,19 +45,50 @@ window.calcCharge=function(){const mah=num('cmah'),watts=num('watts'),eff=num('c
 window.calcStorage=function(){const photos=num('photos')*4/1024,video=num('video')*.18,apps=num('apps')*.25,games=num('games')*3,downloads=num('downloads'),system=24,total=photos+video+apps+games+downloads+system;let rec='128GB';if(total>100)rec='256GB';if(total>210)rec='512GB or more';const out=$('#storageResult');if(out)out.innerHTML=`Estimated usage: <strong>${total.toFixed(1)}GB</strong>. Suggested capacity: <strong>${rec}</strong>.`};
 
 
+
+
+/* ARTIPHONERA V9.1 global theme controller */
 (function(){
   const themes=['ocean','violet','teal','midnight','rose'];
-  const saved=localStorage.getItem('artiphonera-theme');
-  const theme=themes.includes(saved)?saved:'ocean';
-  document.body.dataset.theme=theme;
-  document.querySelectorAll('.theme-dot').forEach(btn=>{
-    btn.classList.toggle('active',btn.dataset.theme===theme);
-    btn.addEventListener('click',()=>{
-      const t=btn.dataset.theme;
-      if(!themes.includes(t))return;
-      document.body.dataset.theme=t;
-      localStorage.setItem('artiphonera-theme',t);
-      document.querySelectorAll('.theme-dot').forEach(x=>x.classList.toggle('active',x.dataset.theme===t));
+  function currentTheme(){
+    try{
+      const t=localStorage.getItem('artiphonera-theme');
+      return themes.includes(t)?t:'ocean';
+    }catch(e){ return 'ocean'; }
+  }
+  function applyTheme(t){
+    if(!themes.includes(t)) t='ocean';
+    document.documentElement.setAttribute('data-theme',t);
+    if(document.body) document.body.setAttribute('data-theme',t);
+    try{ localStorage.setItem('artiphonera-theme',t); }catch(e){}
+    document.querySelectorAll('.theme-choice').forEach(x=>x.classList.toggle('active',x.dataset.theme===t));
+  }
+  function init(){
+    applyTheme(currentTheme());
+    document.querySelectorAll('.theme-menu').forEach(menu=>{
+      const toggle=menu.querySelector('.theme-toggle');
+      const pop=menu.querySelector('.theme-popover');
+      if(!toggle || !pop) return;
+      toggle.addEventListener('click',e=>{
+        e.stopPropagation();
+        const opening=pop.hidden;
+        document.querySelectorAll('.theme-popover').forEach(x=>x.hidden=true);
+        pop.hidden=!opening;
+        toggle.setAttribute('aria-expanded',String(opening));
+      });
+      menu.querySelectorAll('.theme-choice').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          applyTheme(btn.dataset.theme);
+          pop.hidden=true;
+          toggle.setAttribute('aria-expanded','false');
+        });
+      });
     });
-  });
+    document.addEventListener('click',()=>{
+      document.querySelectorAll('.theme-popover').forEach(x=>x.hidden=true);
+      document.querySelectorAll('.theme-toggle').forEach(x=>x.setAttribute('aria-expanded','false'));
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
+  else init();
 })();

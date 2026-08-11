@@ -64,3 +64,36 @@ window.calcStorage = function(){
  if(total>210) rec='512GB or more';
  $('#storageResult').innerHTML=`Estimated usage: <strong>${total.toFixed(1)}GB</strong> including about ${system}GB reserved for the system. Suggested capacity: <strong>${rec}</strong>.`;
 }
+
+
+// ARTIPHONERA v2: rotating hero and language selector
+const apSlides = $$('.hero-slide');
+const apDots = $$('.slider-dot');
+let apIndex = 0;
+let apTimer;
+
+function apShow(i){
+  if(!apSlides.length) return;
+  apIndex = (i + apSlides.length) % apSlides.length;
+  apSlides.forEach((s,n)=>s.classList.toggle('active', n===apIndex));
+  apDots.forEach((d,n)=>d.classList.toggle('active', n===apIndex));
+}
+function apStart(){
+  if(apSlides.length < 2) return;
+  clearInterval(apTimer);
+  apTimer = setInterval(()=>apShow(apIndex+1), 4500);
+}
+apDots.forEach((d,i)=>d.addEventListener('click',()=>{apShow(i);apStart();}));
+apShow(0); apStart();
+
+const apLang = $('#language-select');
+if(apLang){
+  apLang.addEventListener('change',()=>{
+    if(apLang.value==='en') location.href = apLang.dataset.en || '/';
+    else if(apLang.value==='ar') location.href = apLang.dataset.ar || '/ar/';
+    else {
+      alert('This language is prepared for a later reviewed translation release.');
+      apLang.value = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+    }
+  });
+}

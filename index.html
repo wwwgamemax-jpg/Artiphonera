@@ -13,6 +13,8 @@
 <meta property="og:description" content="Smartphone troubleshooting, practical guides, comparisons and interactive tools for battery, charging, storage, performance and more.">
 <meta property="og:type" content="website">
 <!-- ADSENSE: add the official AdSense script here only after you have a valid publisher ID. -->
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="ar" href="ar/index.html">
 </head>
 <body>
 <header class="site-header">
@@ -25,7 +27,7 @@
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
     </nav>
-    <button class="search-btn" aria-label="Search">Search</button>
+    <select id="language-select" class="lang-select" data-en="index.html" data-ar="ar/index.html" aria-label="Language"><option value="en" selected>EN</option><option value="ar">العربية</option><option value="es">ES</option><option value="fr">FR</option><option value="de">DE</option><option value="pt">PT</option><option value="it">IT</option><option value="tr">TR</option><option value="id">ID</option><option value="hi">HI</option><option value="ja">JA</option><option value="ko">KO</option><option value="nl">NL</option><option value="pl">PL</option><option value="vi">VI</option></select><button class="search-btn" aria-label="Search">Search</button>
     <button class="menu-btn" aria-label="Menu">☰</button>
   </div>
 </header>
@@ -49,11 +51,16 @@
         <a class="btn secondary" href="#guides">Explore Guides</a>
       </div>
     </div>
-    <div class="device-stage" aria-hidden="true">
-      <div class="orb one"></div><div class="orb two"></div>
-      <div class="phone">
-        <div class="screen-title">Find the fix.</div>
-        <div class="mini"><span></span><span></span><span></span><span></span></div>
+    <div class="device-stage">
+      <div class="hero-slider" aria-label="Featured smartphone topics">
+        <div class="hero-slide active"><img src="assets/slide-battery.svg" alt="Battery troubleshooting illustration"></div>
+        <div class="hero-slide"><img src="assets/slide-charging.svg" alt="Phone charging guide illustration"></div>
+        <div class="hero-slide"><img src="assets/slide-storage.svg" alt="Phone storage planner illustration"></div>
+        <div class="slider-dots">
+          <button class="slider-dot active" aria-label="Battery slide"></button>
+          <button class="slider-dot" aria-label="Charging slide"></button>
+          <button class="slider-dot" aria-label="Storage slide"></button>
+        </div>
       </div>
     </div>
   </div>

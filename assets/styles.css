@@ -98,3 +98,18 @@ input,select{width:100%;padding:12px 13px;border-radius:12px;border:1px solid va
   .problem-grid{grid-template-columns:1fr 1fr}.content-grid,.tools-grid,.footer-grid,.form-grid{grid-template-columns:1fr}
   .band{align-items:flex-start;flex-direction:column}.phone{width:190px;height:335px}.section-head{align-items:flex-start;flex-direction:column}
 }
+
+
+/* ARTIPHONERA v2 */
+.lang-select{background:#0c1730;color:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:9px 10px;font-weight:700}
+.hero-slider{position:relative;width:min(100%,560px);margin:auto}
+.hero-slide{display:none;animation:apFade .45s ease}
+.hero-slide.active{display:block}
+.hero-slide img{width:100%;display:block;border-radius:30px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.slider-dots{display:flex;justify-content:center;gap:9px;margin-top:14px}
+.slider-dot{width:10px;height:10px;padding:0;border-radius:50%;border:0;background:#334155;cursor:pointer}
+.slider-dot.active{background:linear-gradient(135deg,var(--cyan),var(--purple))}
+@keyframes apFade{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
+[dir="rtl"] body{text-align:right}
+[dir="rtl"] .nav-links{margin-left:0;margin-right:auto}
+[dir="rtl"] .section-head,[dir="rtl"] .band{direction:rtl}

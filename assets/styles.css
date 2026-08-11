@@ -680,3 +680,8 @@ html[dir="rtl"] .theme-popover{right:auto;left:0}
 @media(max-width:650px){
   .review-cover{padding:10px}
 }
+
+/* V10.3 language selector on every page */
+.global-language-select{min-width:135px;height:44px;padding:0 12px;border-radius:13px;border:1px solid var(--theme-border);background:var(--theme-panel);color:var(--theme-text);font-weight:800;flex:0 0 auto}
+@media(max-width:900px){.global-language-select{width:105px;min-width:105px;height:42px;font-size:12px}}
+@media(max-width:520px){.global-language-select{width:84px;min-width:84px;padding:0 6px}.site-header .brand img{width:116px!important;min-width:116px!important}}

@@ -92,3 +92,17 @@ window.calcStorage=function(){const photos=num('photos')*4/1024,video=num('video
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
   else init();
 })();
+
+/* V10.3 same-page language switching everywhere */
+(function(){
+ const supported=['en','ar','es','fr','de','pt','it'];
+ const current=()=>{const m=location.pathname.match(/^\/(ar|es|fr|de|pt|it)(?=\/|$)/);return m?m[1]:'en'};
+ const base=()=>{let p=location.pathname.replace(/^\/(ar|es|fr|de|pt|it)(?=\/|$)/,'');return (!p||p==='/')?'/index.html':p};
+ document.querySelectorAll('.global-language-select').forEach(sel=>{
+   sel.value=current();
+   sel.addEventListener('change',function(){
+     const c=this.value;if(!supported.includes(c))return;
+     const p=base();location.href=c==='en'?p:'/'+c+p;
+   });
+ });
+})();

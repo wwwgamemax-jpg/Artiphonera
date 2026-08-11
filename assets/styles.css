@@ -175,3 +175,14 @@ input,select{width:100%;padding:12px 13px;border-radius:12px;border:1px solid va
 .v5-trust span{color:var(--muted);font-size:13px}
 @media(max-width:900px){.v5-feature-grid{grid-template-columns:repeat(2,1fr)}.v5-content-layout{grid-template-columns:1fr}.v5-phone-stage{min-height:430px}.v5-phone{width:230px;height:420px}.brand img{width:255px!important}}
 @media(max-width:620px){.v5-feature-grid,.v5-guides,.v5-trust{grid-template-columns:1fr}.v5-hero{padding-top:42px}.v5-phone-stage{min-height:390px}.brand img{width:220px!important}.v5-hero h1{font-size:48px}}
+
+/* V6 unmistakable visual refresh */
+.v6-hero{background:
+ radial-gradient(circle at 78% 28%,rgba(74,222,255,.16),transparent 26%),
+ radial-gradient(circle at 18% 70%,rgba(124,92,255,.18),transparent 30%),
+ linear-gradient(135deg,#071126 0%,#0b1838 48%,#11113c 100%)!important;
+ min-height:680px;display:flex;align-items:center}
+.v6-hero .hero-grid{grid-template-columns:1.05fr .95fr}
+.v6-hero h1{font-size:clamp(54px,7vw,92px)!important}
+html[dir="rtl"] body{text-align:right}
+html[dir="rtl"] .nav,html[dir="rtl"] .cta-row{direction:rtl}

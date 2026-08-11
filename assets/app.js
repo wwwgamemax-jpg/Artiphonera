@@ -134,20 +134,14 @@ showArticleSlide(0); startArticleSlider();
   });
 }
 
-// ARTIPHONERA v5.1: robust language switching from any page
+
+// ARTIPHONERA v6 multilingual navigation
 (function(){
-  const picker = document.querySelector('#language-select');
-  if(!picker) return;
-
-  const active = ['en','ar','es','fr','de','pt','it'];
-  const path = window.location.pathname;
-  const current = (path.match(/^\/(ar|es|fr|de|pt|it)(?:\/|$)/) || [])[1] || 'en';
-
-  if(active.includes(current)) picker.value = current;
-
-  picker.addEventListener('change', function(){
-    const code = picker.value;
-    const target = code === 'en' ? '/index.html' : '/' + code + '/index.html';
-    window.location.assign(target);
-  });
+ const p=document.getElementById('language-select'); if(!p)return;
+ const m=location.pathname.match(/^\/(ar|es|fr|de|pt|it)(?:\/|$)/);
+ const current=m?m[1]:'en'; p.value=current;
+ p.addEventListener('change',function(){
+   const code=this.value;
+   location.href=code==='en' ? '/index.html' : '/'+code+'/index.html';
+ });
 })();

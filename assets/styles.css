@@ -136,3 +136,42 @@ input,select{width:100%;padding:12px 13px;border-radius:12px;border:1px solid va
   .article-slide-copy{padding:22px}
   .article-slide-copy h3{font-size:24px}
 }
+
+/* ARTIPHONERA v5 redesign */
+:root{--v5panel:#0b1428;--v5panel2:#101c35}
+.site-header{background:rgba(4,9,20,.92);backdrop-filter:blur(18px)}
+.brand img{width:320px!important;max-height:64px!important}
+.hero.v5-hero{padding:72px 0 54px;overflow:hidden}
+.v5-hero .hero-grid{align-items:center}
+.v5-hero h1{font-size:clamp(46px,6vw,78px);line-height:.98;letter-spacing:-.045em;margin:14px 0 20px}
+.v5-hero p{font-size:18px;max-width:650px}
+.v5-phone-stage{position:relative;min-height:520px;display:grid;place-items:center}
+.v5-glow{position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.22),rgba(59,130,246,.10) 45%,transparent 70%)}
+.v5-phone{position:relative;width:275px;height:500px;border-radius:52px;background:linear-gradient(145deg,#14223f,#050914);border:3px solid #334d75;box-shadow:0 34px 90px rgba(0,0,0,.55),0 0 55px rgba(34,211,238,.12);transform:rotate(5deg);padding:18px}
+.v5-screen{height:100%;border-radius:38px;background:linear-gradient(155deg,#0b1831,#142952 48%,#351f68);overflow:hidden;position:relative}
+.v5-screen:before{content:"";position:absolute;inset:18% -30% auto 25%;height:220px;background:radial-gradient(circle,#22d3ee55,transparent 62%)}
+.v5-notch{width:92px;height:25px;background:#02050c;border-radius:20px;margin:10px auto}
+.v5-screen-copy{position:absolute;bottom:50px;left:25px;right:25px}
+.v5-screen-copy b{font-size:28px}.v5-screen-copy span{display:block;color:#b9c8dc;margin-top:8px}
+.v5-section{padding:70px 0}
+.v5-section.alt{background:linear-gradient(180deg,rgba(10,19,38,.72),rgba(6,12,26,.3))}
+.v5-kicker{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:900;color:#72e8f6}
+.v5-title{font-size:clamp(30px,4vw,48px);margin:8px 0 12px}
+.v5-feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.v5-feature{background:linear-gradient(145deg,var(--v5panel),#0a1224);border:1px solid var(--line);border-radius:22px;padding:24px;min-height:190px;transition:.2s transform,.2s border-color}
+.v5-feature:hover{transform:translateY(-4px);border-color:#31557b}
+.v5-feature .icon{font-size:30px}.v5-feature h3{margin:16px 0 8px}.v5-feature p{color:var(--muted);font-size:14px}
+.v5-content-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,.7fr);gap:28px;margin-top:30px}
+.v5-guides{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.v5-guide{display:block;background:var(--v5panel);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.v5-guide img{width:100%;height:210px;object-fit:cover;background:#081226}
+.v5-guide-copy{padding:20px}.v5-guide h3{margin:8px 0}.v5-guide p{color:var(--muted)}
+.v5-side{background:var(--v5panel);border:1px solid var(--line);border-radius:22px;padding:22px;height:max-content}
+.v5-side h3{margin-top:0}.v5-side a{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.v5-side a:last-child{border-bottom:0}.v5-side .num{font-weight:900;color:#55dff0}
+.v5-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}
+.v5-trust div{padding:25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.v5-trust b{display:block;font-size:18px;margin-bottom:6px}
+.v5-trust span{color:var(--muted);font-size:13px}
+@media(max-width:900px){.v5-feature-grid{grid-template-columns:repeat(2,1fr)}.v5-content-layout{grid-template-columns:1fr}.v5-phone-stage{min-height:430px}.v5-phone{width:230px;height:420px}.brand img{width:255px!important}}
+@media(max-width:620px){.v5-feature-grid,.v5-guides,.v5-trust{grid-template-columns:1fr}.v5-hero{padding-top:42px}.v5-phone-stage{min-height:390px}.brand img{width:220px!important}.v5-hero h1{font-size:48px}}

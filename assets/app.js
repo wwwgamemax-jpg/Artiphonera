@@ -108,12 +108,7 @@ articleDots.forEach((d,i)=>d.addEventListener('click',()=>{showArticleSlide(i);s
 showArticleSlide(0); startArticleSlider();
 
 
-// ARTIPHONERA v4 language routing
-const apLangV4 = document.querySelector('#language-select');
-if(apLangV4){
-  apLangV4.addEventListener('change',()=>{
-    const current = location.pathname;
-    const inSubdir = /^\/(ar|es|fr|de|pt|it)\//.test(current);
+//.test(current);
     const prefix = inSubdir ? '../' : '';
     const map = {
       en: prefix + 'index.html',
@@ -129,5 +124,18 @@ if(apLangV4){
       alert('This language is prepared for a later reviewed translation release.');
       apLangV4.value = document.documentElement.lang || 'en';
     }
+  });
+}
+
+// ARTIPHONERA v5: seven active languages only
+const langPicker = document.querySelector('#language-select');
+if(langPicker){
+  langPicker.addEventListener('change',()=>{
+    const code = langPicker.value;
+    const path = location.pathname;
+    const currentLang = (path.match(/^\/(ar|es|fr|de|pt|it)\//)||[])[1];
+    let base = currentLang ? '../' : '';
+    const routes = {en:'index.html',ar:'ar/index.html',es:'es/index.html',fr:'fr/index.html',de:'de/index.html',pt:'pt/index.html',it:'it/index.html'};
+    location.href = base + routes[code];
   });
 }

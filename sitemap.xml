@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN.example/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/about.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/contact.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/privacy.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/terms.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/disclaimer.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/articles/battery-drain.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/articles/slow-charging.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/articles/phone-overheating.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/battery-runtime.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/charging-time.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/storage-planner.html</loc></url>
+</urlset>

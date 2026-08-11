@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Charging Time Calculator | ARTIPHONERA</title>
+<meta name="description" content="Estimate an idealized phone charging time from battery capacity and charger power.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/styles.css">
+<meta name="theme-color" content="#050b18">
+<meta property="og:site_name" content="ARTIPHONERA">
+<meta property="og:title" content="Charging Time Calculator | ARTIPHONERA">
+<meta property="og:description" content="Estimate an idealized phone charging time from battery capacity and charger power.">
+<meta property="og:type" content="website">
+<!-- ADSENSE: add the official AdSense script here only after you have a valid publisher ID. -->
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="ARTIPHONERA home"><img src="../assets/logo.svg" alt="ARTIPHONERA"></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="../index.html#problems">Phone Problems</a>
+      <a href="../index.html#guides">Guides</a>
+      <a href="../index.html#tools">Tools</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="search-btn" aria-label="Search">Search</button>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<div class="search-panel" aria-hidden="false">
+  <div class="search-box">
+    <button class="search-btn close-search">Close</button>
+    <input id="site-search" placeholder="Search guides and tools…" aria-label="Search ARTIPHONERA">
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+<main class="wrap tool-page"><div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Charging Time</div>
+<h1>Charging Time Calculator</h1><p class="lede">Estimate idealized charging time using battery capacity and charger wattage.</p>
+<div class="tool-shell"><div class="form-grid">
+<label>Battery capacity (mAh)<input id="cmah" type="number" value="5000" min="1"></label>
+<label>Charger power (W)<input id="watts" type="number" value="25" min="1"></label>
+<label>Estimated efficiency (%)<input id="ceff" type="number" value="80" min="1" max="100"></label>
+</div><div class="cta-row"><button class="btn primary" onclick="calcCharge()">Calculate</button></div><div id="chargeResult" class="result">Enter your values and calculate.</div></div>
+<div class="callout">Real charging is usually slower near a full battery because phones reduce power to manage heat and battery stress.</div>
+</main>
+<footer>
+<div class="wrap footer-grid">
+  <div>
+    <img src="../assets/logo.svg" alt="ARTIPHONERA" style="width:220px">
+    <p>Clear smartphone help, practical guides and useful tools for everyday technology.</p>
+    <p class="small">© 2026 ARTIPHONERA. All rights reserved.</p>
+  </div>
+  <div><h4>Explore</h4>
+    <a href="../index.html#problems">Phone Problems</a><a href="../index.html#guides">Guides</a><a href="../index.html#tools">Tools</a>
+  </div>
+  <div><h4>Company</h4>
+    <a href="../about.html">About</a><a href="../contact.html">Contact</a>
+  </div>
+  <div><h4>Legal</h4>
+    <a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a>
+  </div>
+</div>
+</footer>
+<script src="../assets/app.js"></script>
+</body></html>

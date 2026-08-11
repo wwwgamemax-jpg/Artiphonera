@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" role="img" aria-labelledby="title desc">
+<title id="title">ARTIPHONERA</title>
+<desc id="desc">Artiphonera logo, a stylized smartphone A mark with blue and purple gradients.</desc>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#22d3ee"/>
+    <stop offset=".5" stop-color="#3b82f6"/>
+    <stop offset="1" stop-color="#8b5cf6"/>
+  </linearGradient>
+</defs>
+<g transform="translate(8 8)">
+  <rect x="10" y="4" width="108" height="136" rx="28" fill="#071126" stroke="url(#g)" stroke-width="8"/>
+  <rect x="33" y="27" width="62" height="83" rx="12" fill="url(#g)" opacity=".12"/>
+  <path d="M43 104 L64 45 Q68 35 76 45 L99 104 H84 L79 89 H57 L52 104 Z M62 76 H74 L68 59 Z" fill="url(#g)"/>
+  <circle cx="64" cy="126" r="5" fill="#22d3ee"/>
+</g>
+<text x="150" y="80" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800" letter-spacing="2" fill="#f8fafc">ARTI</text>
+<text x="273" y="80" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800" letter-spacing="2" fill="url(#g)">PHONERA</text>
+<text x="153" y="112" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" letter-spacing="3" fill="#94a3b8">SMART ANSWERS FOR YOUR DIGITAL LIFE</text>
+</svg>

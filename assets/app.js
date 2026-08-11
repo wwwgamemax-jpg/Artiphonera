@@ -86,17 +86,6 @@ function apStart(){
 apDots.forEach((d,i)=>d.addEventListener('click',()=>{apShow(i);apStart();}));
 apShow(0); apStart();
 
-const apLang = $('#language-select');
-if(apLang){
-  apLang.addEventListener('change',()=>{
-    if(apLang.value==='en') location.href = apLang.dataset.en || '/';
-    else if(apLang.value==='ar') location.href = apLang.dataset.ar || '/ar/';
-    else {
-      alert('This language is prepared for a later reviewed translation release.');
-      apLang.value = document.documentElement.lang === 'ar' ? 'ar' : 'en';
-    }
-  });
-}
 
 // ARTIPHONERA v3 article carousel
 const articleTrack = $('#article-track');
@@ -117,3 +106,28 @@ function startArticleSlider(){
 }
 articleDots.forEach((d,i)=>d.addEventListener('click',()=>{showArticleSlide(i);startArticleSlider();}));
 showArticleSlide(0); startArticleSlider();
+
+
+// ARTIPHONERA v4 language routing
+const apLangV4 = document.querySelector('#language-select');
+if(apLangV4){
+  apLangV4.addEventListener('change',()=>{
+    const current = location.pathname;
+    const inSubdir = /^\/(ar|es|fr|de|pt|it)\//.test(current);
+    const prefix = inSubdir ? '../' : '';
+    const map = {
+      en: prefix + 'index.html',
+      ar: prefix + 'ar/index.html',
+      es: prefix + 'es/index.html',
+      fr: prefix + 'fr/index.html',
+      de: prefix + 'de/index.html',
+      pt: prefix + 'pt/index.html',
+      it: prefix + 'it/index.html'
+    };
+    if(map[apLangV4.value]) location.href = map[apLangV4.value];
+    else {
+      alert('This language is prepared for a later reviewed translation release.');
+      apLangV4.value = document.documentElement.lang || 'en';
+    }
+  });
+}

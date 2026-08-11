@@ -13,4 +13,9 @@
   <url><loc>https://YOUR-DOMAIN.example/tools/charging-time.html</loc></url>
   <url><loc>https://YOUR-DOMAIN.example/tools/storage-planner.html</loc></url>
   <url><loc>https://YOUR-DOMAIN.example/ar/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/es/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/fr/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/de/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/pt/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/it/</loc></url>
 </urlset>
